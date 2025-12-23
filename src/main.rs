@@ -24,8 +24,8 @@ fn main() -> Result<(), String>
     let mut canvas = window.into_canvas().build().map_err(|e| e.to_string())?;
     let tex_creator = canvas.texture_creator();
 
-    let deck1_filename = "2008/empoleon_bronzong_long.txt";
-    let deck2_filename = "2008/honchkrow_long.txt";
+    let deck1_filename = "2009/amu_long.txt";
+    let deck2_filename = "2009/kingdra_long.txt";
     let (card_loader, card_textures) =
         load_cards::CardIndexer::make(deck1_filename, deck2_filename, &tex_creator);
     let deck1 = card_loader.build_deck(deck1_filename);

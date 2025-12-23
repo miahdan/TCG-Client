@@ -526,10 +526,11 @@ impl State
                 },
                 I::Right => {
                     let layout = self.current_layout();
-                    let new_highlight = if st.current_highlight >= layout.deck.len() {
+                    let next_highlight = st.current_highlight + 1;
+                    let new_highlight = if next_highlight >= layout.deck.len() {
                         st.current_highlight
                     } else {
-                        st.current_highlight + 1
+                        next_highlight
                     };
                     InputMode::DeckSearch(st.change_highlight(new_highlight))
                 },
